@@ -28,7 +28,7 @@ bool spm(const string& x, const string& y){
 }
 
 int main(){
-    string s = "axyx";
+    string s = "axy";
     string k = "adxcpy";
     cout<< (spm(s,k) > 0 ? "True" : "False");
     return 0;
