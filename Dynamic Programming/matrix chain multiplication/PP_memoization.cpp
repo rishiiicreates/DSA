@@ -26,11 +26,11 @@ int solve(const string& arr, int i, int j){
 
     //choice diagram
     for(int k = i; k < j; k++){
-        t[i][j] = solve(arr,i,k) + solve (arr,k+1,j) + 1;
+        int temp = solve(arr,i,k) + solve (arr,k+1,j) + 1;
 
-        mn = min(t[i][j], mn);
+        mn = min(temp, mn);
     }
-    return mn;
+    return t[i][j] = mn;
 }
 int main(){
     // scheme: k = i to k = j-1 -> fn(i to k) and fn(k+1 to j)
