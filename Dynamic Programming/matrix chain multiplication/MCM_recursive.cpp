@@ -21,7 +21,6 @@
 using namespace std;
 
 
-
 int solve(const vector<int>& arr, int i, int j){
     
     //base condition
