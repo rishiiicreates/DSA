@@ -17,6 +17,7 @@ string lcsp(const string& x, const string& y){
         for(int j = 1; j < m + 1; j++){
             if(x[i-1] == y[j-1]){
                 t[i][j] = t[i-1][j-1] + 1;
+                
             }
             else{
                 t[i][j] = max(t[i-1][j], t[i][j-1]);
