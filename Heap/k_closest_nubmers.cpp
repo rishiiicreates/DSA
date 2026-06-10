@@ -19,7 +19,7 @@ vector<int> solve(const vector<int>& arr,const int& k,const int& x){
     }
 
     vector<int> ans;
-    while(maxh.size()> 0){
+    while(!maxh.empty()){
         ans.push_back(maxh.top().second);
         maxh.pop();
     }
