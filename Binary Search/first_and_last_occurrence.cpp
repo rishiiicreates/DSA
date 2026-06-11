@@ -1,12 +1,10 @@
 //input: arr[], int k
 //output: first and last occurrence of k index
 
-
-
-//
 #include <iostream>
 #include <vector>
 using namespace std;
+
 
 int first_occur(const vector<int>& arr, int k){
     int len = arr.size();
@@ -26,7 +24,6 @@ int first_occur(const vector<int>& arr, int k){
     return result;
 }
 
-
 int last_occur(const vector<int>& arr, int k){
     int len = arr.size();
     int left = 0;
@@ -44,6 +41,8 @@ int last_occur(const vector<int>& arr, int k){
     }
     return result;
 }
+
+
 
 int main(){
     vector<int> arr{2,4,10,10,10,18,20};
