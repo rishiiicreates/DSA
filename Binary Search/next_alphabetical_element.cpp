@@ -1,5 +1,6 @@
 //sorted array of alphabets
 //find ceil of this arr[alphabets]
+//if element present: if element is present, then also give ceil
 
 #include <iostream>
 #include <vector>
@@ -14,7 +15,9 @@ char solve(const string& arr,const char& s){
     while(left <= right){
         int mid = left + (right - left) / 2;
 
-        if(arr[mid] == s) return arr[mid];
+        if(arr[mid] == s){
+            left = mid + 1;
+        }
         else if(arr[mid] > s){
             ans = arr[mid];
             right = mid - 1;

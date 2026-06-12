@@ -35,7 +35,7 @@
 
 //try using stl - heap:
 
-//max heap -> priority_queue<int> maxheap;
-//min heap -> priority_queue<int, vector<int>, greater<int>> minheap;
+//max heap -> priority_queue<int> maxheap; {largest, greatest, top}
+//min heap -> priority_queue<int, vector<int>, greater<int>> minheap; {smallest, lowest}
 
 
