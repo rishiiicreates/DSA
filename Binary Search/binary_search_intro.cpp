@@ -17,7 +17,7 @@
 // 8)floor/ciel on an element
 // 9)next alphabet
 // 10)index of last 1 in sorted array
-// 11)find position of an element in a sorted array
+// 11)find position of an element in an infinite sorted array
 // 12)min diff. element in sorted array
 // 13)bitonic array max element
 // 14)search in bitonic array
