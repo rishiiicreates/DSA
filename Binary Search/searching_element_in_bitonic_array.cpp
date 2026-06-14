@@ -1,3 +1,7 @@
+// A bitonic array (often misspelled as bionic) is a special data structure where the elements are strictly 
+//increasing up to a certain peak point, and then strictly decreasing after that point.
+//same as peak element.
+
 //input: arr[int], int element
 //output: index
 
