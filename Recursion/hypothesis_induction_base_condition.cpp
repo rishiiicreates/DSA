@@ -74,20 +74,34 @@
 #include <iostream>
 using namespace std;
 
-void solve(int k){
+void one_to_n(int k){
 
     //base condition:
     if(k <= 0) return;
+
+    //hypothesis
+    one_to_n(k-1);
     
     //induction
     cout << k << "  ";
-    
+}
+
+void n_to_one(int k){
+
+    //bass
+    if( k <= 0) return;
+
+    //induction
+    cout << k << "  ";
+
     //hypothesis
-    solve(k-1);
+    n_to_one(k-1);
 }
 
 int main(){
     int k = 10;
-    solve(k);
+    one_to_n(k);
+    cout<<"\n";
+    n_to_one(k);
     return 0;
 }
