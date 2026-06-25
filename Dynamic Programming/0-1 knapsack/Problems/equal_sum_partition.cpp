@@ -50,3 +50,10 @@ int main(){
     cout<<ans;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file determines whether an array can be partitioned into two subsets 
+ * with equal sums. It checks if the total sum is even and then applies the subset 
+ * sum logic to find a subset that equals half of the total sum.
+ */

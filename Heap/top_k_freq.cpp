@@ -40,3 +40,12 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the 'k' most frequent numbers in an array.
+ * It first uses an unordered_map to calculate the frequency of each element.
+ * It then maintains a min-heap of size 'k' to keep track of the elements with the highest frequencies. It pushes pairs of (frequency, element) into the min-heap.
+ * Because a min-heap is used, the element with the lowest frequency among the top elements resides at the top. If the heap size exceeds 'k', the top element is popped.
+ * Finally, the remaining 'k' elements in the heap are extracted and returned as the 'k' most frequent numbers.
+ */

@@ -33,3 +33,10 @@ int main(){
     cout<<result;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file calculates the total number of subsets of an array that sum up 
+ * to a specific given value, utilizing a variation of the 0-1 knapsack approach 
+ * where possibilities are summed instead of maximized.
+ */

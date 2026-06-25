@@ -33,3 +33,11 @@ int main(){
     cout<< (spm(s,k) > 0 ? "True" : "False");
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file solves the Sequence Pattern Matching problem (checking if string `x` is a subsequence of string `y`).
+ * It utilizes the standard LCS algorithm to find the longest common subsequence between `x` and `y`.
+ * If the length of the LCS equals the length of string `x` (`n == t[n][m]`), it implies all characters of `x` appear in `y` in the correct relative order.
+ * Thus, `x` is confirmed as a subsequence of `y`.
+ */

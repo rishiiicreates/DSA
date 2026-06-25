@@ -47,3 +47,8 @@ int main(){
     cout<<solve(arr,i,j);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the Matrix Chain Multiplication (MCM) problem using a pure recursive approach without memoization. The `solve` function calculates the minimum cost to multiply a sequence of matrices given their dimensions in `arr`. It recursively splits the matrix chain into two parts at every possible index `k` between `i` and `j-1`, calculates the cost for both parts plus the cost of multiplying them together, and returns the minimum overall cost.
+ */

@@ -93,5 +93,19 @@ int main() {
     cout << "Median of test case 1: " << findMedianSortedArrays(nums1, nums2) << endl; // Expected: 10.0
     cout << "Median of test case 2: " << findMedianSortedArrays(nums3, nums4) << endl; // Expected: 12.0
 
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds the median of two independently sorted arrays in O(log(min(M, N))) time.
+ * 
+ * Algorithm steps:
+ * 1. Ensure 'nums1' is the smaller array to minimize the binary search space. If not, swap the inputs.
+ * 2. Initialize 'low = 0' and 'high = m' (size of 'nums1').
+ * 3. Binary search for the correct partition point in 'nums1':
+ *    - Calculate 'partitionX' for 'nums1' and the corresponding 'partitionY' for 'nums2' such that the left half of both arrays combined has the same number of elements as the right half.
+ *    - Find the edge elements around the partitions: 'maxLeftX', 'minRightX' from 'nums1', and 'maxLeftY', 'minRightY' from 'nums2'. Use 'INT_MIN' and 'INT_MAX' for out-of-bounds cases.
+ *    - Check if the partition is perfect ('maxLeftX <= minRightY' and 'maxLeftY <= minRightX'). If so, calculate the median based on whether the total size is odd or even.
+ *    - If 'maxLeftX > minRightY', the cut in 'nums1' is too far right, so update 'high = partitionX - 1'.
+ *    - Else, the cut in 'nums1' is too far left, so update 'low = partitionX + 1'.
+ */

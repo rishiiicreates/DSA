@@ -39,3 +39,12 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the Nearest Smaller Element (NSE) to the right for every element in an array.
+ * It uses a stack and iterates through the array from right to left, which helps in finding the next smaller element efficiently.
+ * For each element, it pops elements from the stack as long as they are greater than or equal to the current element. This keeps the stack in a monotonically increasing order (from bottom to top).
+ * If the stack becomes empty, no smaller element exists to the right, so `-1` is assigned. Otherwise, the top element of the stack is the NSE.
+ * After processing all elements, the result array is reversed to match the original array's order. Time complexity is O(N).
+ */

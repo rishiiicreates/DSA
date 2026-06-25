@@ -32,3 +32,12 @@ int main(){
     cout<<lrs(s);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds the Longest Repeating Subsequence (LRS) in a string.
+ * It uses the LCS logic where the string is compared with itself (`s` and `k = s`).
+ * The key difference from standard LCS is the condition `i != j`.
+ * When characters match but their indices are different (`s[i-1] == k[j-1] && i != j`), it contributes to the repeating subsequence.
+ * This ensures that a character at the same position isn't counted as a repeat of itself.
+ */

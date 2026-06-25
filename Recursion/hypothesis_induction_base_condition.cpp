@@ -105,3 +105,21 @@ int main(){
     n_to_one(k);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file demonstrates the IBH (Induction-Base condition-Hypothesis) method for writing recursive functions.
+ * It contains two examples: printing numbers from 1 to N, and from N to 1.
+ * 
+ * - one_to_n(k): 
+ *   1. Base case: Stops when k <= 0.
+ *   2. Hypothesis: We trust `one_to_n(k-1)` will correctly print 1 to k-1.
+ *   3. Induction: After the hypothesis call completes, we print the current value 'k'.
+ *      This results in ascending order because printing happens on the way "up" the recursive stack.
+ * 
+ * - n_to_one(k):
+ *   1. Base case: Stops when k <= 0.
+ *   2. Induction: We print the current value 'k' first.
+ *   3. Hypothesis: We recursively call `n_to_one(k-1)` to print the rest.
+ *      This results in descending order because printing happens on the way "down" the recursive stack.
+ */

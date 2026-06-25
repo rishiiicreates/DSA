@@ -56,4 +56,11 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file implements the 0-1 knapsack problem using a bottom-up (iterative) 
+ * dynamic programming approach. It eliminates the recursion entirely and builds the 
+ * solution matrix step-by-step from base conditions up to the target capacity.
+ */
+
 

@@ -55,3 +55,8 @@ int main(){
     cout << "Number of ways: " << solve(arr, i, j, true) << endl; 
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements a recursive solution for the "Evaluate Expression to True" problem (also known as Boolean Parenthesization). It calculates the number of ways to parenthesize a boolean expression (containing 'T', 'F', '&', '|', '^') such that it evaluates to a desired boolean value (`wtf`, meaning "want to find"). It loops through all operators at index `k`, recursively calculates the number of ways the left and right subexpressions can evaluate to true or false, and combines these counts based on the current operator at `k`.
+ */

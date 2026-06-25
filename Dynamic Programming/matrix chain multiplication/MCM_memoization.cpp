@@ -33,3 +33,8 @@ int main(){
     cout<<solve(arr,i,j);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the Matrix Chain Multiplication (MCM) problem using recursion with memoization (top-down dynamic programming). It uses a 2D vector `t` to store previously computed results for subproblems, avoiding redundant calculations. The `solve` function calculates the minimum cost to multiply a sequence of matrices from index `i` to `j` by trying all possible splitting points `k` and memoizing the minimum cost found.
+ */

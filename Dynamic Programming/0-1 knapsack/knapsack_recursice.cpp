@@ -38,3 +38,10 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file demonstrates the pure recursive solution to the 0-1 knapsack problem. 
+ * It translates the choice diagram directly into recursive calls, returning the maximum 
+ * value by including or excluding items without any overlapping subproblem storage.
+ */
+

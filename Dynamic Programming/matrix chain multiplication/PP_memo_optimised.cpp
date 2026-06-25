@@ -55,3 +55,8 @@ int main(){
     cout<<solve(arr,i,j);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements an optimized memoization approach for the Palindrome Partitioning problem. It finds the minimum number of cuts needed to partition a string such that every substring is a palindrome. It improves upon standard memoization by checking if the subproblems `left` and `right` (split at `k`) are already computed in the memoization table `t` before making recursive calls. This further prunes the recursion tree, leading to better performance.
+ */

@@ -51,3 +51,13 @@ int main(){
 
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm calculates the height of a binary tree using the Hypothesis-Induction-Base Condition method.
+ * 1. Base Condition: If the current node is null (empty tree), its height is 0.
+ * 2. Hypothesis: We assume the recursive function correctly calculates the height of the left and right subtrees.
+ *    We store these values in 'l' and 'r' respectively.
+ * 3. Induction: The height of the current tree rooted at this node is the maximum height among its left and
+ *    right subtrees, plus 1 (to account for the current node itself).
+ */

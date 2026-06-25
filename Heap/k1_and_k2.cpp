@@ -32,3 +32,12 @@ int main(){
     cout << solve(arr,k1,k2);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm calculates the sum of all elements in the array that are strictly greater than the k1-th smallest element and strictly smaller than the k2-th smallest element.
+ * It uses a max-heap to keep track of the 'k2' smallest elements. Elements are pushed into the max-heap, and if the heap size exceeds 'k2', the largest element is popped.
+ * After iterating through the array, the top of the max-heap is the k2-th smallest element. It is popped to exclude it from the sum.
+ * Then, the remaining elements are popped and added to the sum until the heap size reduces to 'k1', thus excluding the k1 smallest elements.
+ * The resulting sum is returned.
+ */

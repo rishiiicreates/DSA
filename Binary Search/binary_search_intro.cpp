@@ -24,3 +24,13 @@
 // 15)find element in sorted array that appears only onces
 // 16)search row wise / column wise in sorted array
 // 17)allocate minimum no. of pages
+
+/*
+ * Explanation:
+ * This file contains an introductory list of binary search problem types and variations.
+ * 
+ * Explanation steps:
+ * 1. Identifies that binary search is applicable when a "sorted" property is mentioned and there's a need to reduce time complexity.
+ * 2. Introduces the concept of "Binary Search on Answer".
+ * 3. Lists various classic binary search problems such as finding first/last occurrences, peak elements, and allocating minimum pages.
+ */

@@ -43,3 +43,10 @@ int main(){
     cout<<result;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file solves the target sum problem where elements can be assigned a '+' or '-' sign. 
+ * It is mathematically equivalent to counting subsets with a given difference, 
+ * thus utilizing the same DP subset sum methodology.
+ */

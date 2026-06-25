@@ -32,3 +32,12 @@ int main(){
     cout<<smallest(arr,k);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the k-th smallest element in an array.
+ * It uses a max-heap to keep track of the 'k' smallest elements seen so far.
+ * Elements are pushed into the max-heap. Since it's a max-heap, the largest element among the current 'k' elements is at the top.
+ * If the size of the heap exceeds 'k', the top element is popped, ensuring that the heap only stores the 'k' smallest elements.
+ * After iterating through all elements, the top of the max-heap is exactly the k-th smallest element, which is returned.
+ */

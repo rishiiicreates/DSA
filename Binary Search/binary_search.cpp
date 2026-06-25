@@ -28,5 +28,18 @@ int main(){
     vector<int> arr{1,2,3,4,5,6,7,8};
     int k = 5;
     cout << solve(arr, k);
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the standard binary search algorithm to find the index of a given element 'k' in a sorted array.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'start' to 0 and 'end' to the array's last index.
+ * 2. Loop while 'start <= end':
+ *    - Calculate 'mid' to avoid integer overflow.
+ *    - If 'arr[mid] == k', the target is found, return 'mid'.
+ *    - If 'k < arr[mid]', the element must be in the left half, so update 'end = mid - 1'.
+ *    - If 'k > arr[mid]', the element must be in the right half, so update 'start = mid + 1'.
+ * 3. Return -1 if the element is not found.
+ */

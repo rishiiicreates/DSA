@@ -54,3 +54,12 @@ int main() {
     cout << "The diameter of the binary tree (number of nodes) is: " << diameter << endl;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements an algorithm to find the diameter of a binary tree using Dynamic Programming on Trees.
+ * The diameter is the longest path between any two leaf nodes, and here it is measured by the number of nodes.
+ * The `solve` function returns the longest path extending from the current node down to a leaf (max(l, r) + 1).
+ * Meanwhile, it updates a reference variable `result` with the maximum diameter found so far,
+ * which is the sum of the longest paths from both the left and right children through the current node (l + r + 1).
+ */

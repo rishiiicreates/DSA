@@ -24,5 +24,17 @@ int solve(const vector<int>& arr){
 int main(){
     vector<int> arr{1,3,8,12,4,2};
     cout<<arr[solve(arr)];
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds the peak (maximum) element in a bitonic array (an array that strictly increases to a peak and then strictly decreases).
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to the last index.
+ * 2. Loop while 'left <= right':
+ *    - Calculate 'mid'.
+ *    - Check if 'mid' is the peak: It is the peak if it's strictly greater than both its neighbors (with bounds checks for the ends of the array).
+ *    - If 'arr[mid] > arr[mid+1]' (and 'mid' is not the last element), the array is decreasing at 'mid'. This means the peak must be to the left, so update 'right = mid - 1'.
+ *    - Else, the array is increasing at 'mid', so the peak must be to the right, update 'left = mid + 1'.
+ */

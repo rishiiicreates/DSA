@@ -47,3 +47,10 @@
 
 // # DP = recursion + storage
 
+/*
+ * Explanation:
+ * This file lists variations of the knapsack problem (subset sum, target sum, etc.) 
+ * and explains the three main types: fractional (greedy), 0-1 (dynamic programming), 
+ * and unbounded knapsack, detailing their characteristics and identification patterns.
+ */
+

@@ -41,5 +41,19 @@ int main() {
     } else {
         cout << "Element not found in the vector." << endl;
     }
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds the index of the first occurrence of '1' in an infinitely sized binary sorted array (consisting of 0s followed by 1s).
+ * 
+ * Algorithm steps:
+ * 1. Initially, set 'left' to 0 and 'right' to 1.
+ * 2. Loop while 'left <= right':
+ *    - Check if the search space bounds need to be expanded. If 'arr[right] < 1' (meaning 'arr[right]' is 0), the '1' has not been enclosed yet. Update 'left = right' and double the 'right' index ('right *= 2') to exponentially expand the search window.
+ *    - Once the window contains '1', calculate 'mid'.
+ *    - If 'arr[mid] == 1', store 'mid' as a potential answer in 'ans', and continue searching in the left half ('right = mid - 1') to find an earlier occurrence of 1.
+ *    - If 'arr[mid] > 0' (which means it's 1), also move 'right = mid - 1'.
+ *    - If 'arr[mid] == 0' (handled by the else block), the first 1 must be to the right, so update 'left = mid + 1'.
+ * 3. Return 'ans'.
+ */

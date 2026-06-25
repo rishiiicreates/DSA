@@ -34,3 +34,8 @@ int main(){
     cout<<"Minimum no of attempts:"<<solve(e,f);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the Egg Dropping Problem using a pure recursive approach. The objective is to find the minimum number of attempts required to find the critical floor from which an egg breaks, given `e` eggs and `f` floors. At each floor `k`, an egg can either break (meaning the critical floor is below, so we have `e-1` eggs and `k-1` floors to check) or not break (meaning the critical floor is above, so we have `e` eggs and `f-k` floors to check). The algorithm takes the worst-case (maximum) of these two outcomes for each floor `k`, and then finds the floor `k` that minimizes this worst-case number of attempts.
+ */

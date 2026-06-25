@@ -49,5 +49,15 @@ int main(){
     vector<int> arr{2,4,10,10,10,18,20};
     int k = 10;
     cout<<count(arr,k);
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file counts the number of occurrences of an element 'k' in a sorted array.
+ * 
+ * Algorithm steps:
+ * 1. It uses two binary search helper functions: 'first_occur' to find the first index of 'k' and 'last_occur' to find the last index.
+ * 2. 'first_occur' performs standard binary search, but when 'arr[mid] == k' is met, it updates 'right = mid - 1' to find earlier occurrences.
+ * 3. 'last_occur' performs standard binary search, but when 'arr[mid] == k' is met, it updates 'left = mid + 1' to find later occurrences.
+ * 4. The total count is calculated as '(last_occur - first_occur) + 1'.
+ */

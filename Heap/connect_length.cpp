@@ -30,3 +30,12 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This algorithm attempts to find the minimum cost to connect ropes.
+ * It uses a min-heap to keep track of rope lengths. All initial rope lengths are pushed into the min-heap.
+ * The algorithm iteratively pops the two smallest ropes from the heap, adds their lengths together, and pushes the combined length back into the heap.
+ * This process continues until only one combined rope remains in the heap, which is then returned.
+ * Note: While this code computes the final combined rope length, to calculate the total minimum cost, it would need to accumulate the intermediate combination costs.
+ */
+

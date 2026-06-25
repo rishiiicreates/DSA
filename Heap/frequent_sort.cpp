@@ -37,3 +37,12 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm sorts an array of elements based on their frequencies in ascending order.
+ * It first uses an unordered_map to count the frequency of each element in the array.
+ * Then, it iterates over the map and pushes the pairs (frequency, element) into a min-heap.
+ * Because a min-heap is used, pairs with the lowest frequency are placed at the top.
+ * Finally, elements are popped from the min-heap one by one and their corresponding values are added to the answer vector, producing an array sorted by frequency.
+ */

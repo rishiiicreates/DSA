@@ -32,3 +32,10 @@ int main(){
     cout<< rodcut(arr, len, sum);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the rod cutting problem, which maps perfectly to the 
+ * unbounded knapsack problem. It determines the optimal way to cut a rod into 
+ * smaller pieces (each with a specific price) to maximize the total profit.
+ */

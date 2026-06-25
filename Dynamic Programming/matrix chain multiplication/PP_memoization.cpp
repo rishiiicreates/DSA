@@ -42,3 +42,8 @@ int main(){
     cout<<solve(arr,i,j);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file provides a standard memoized recursive solution (top-down DP) for the Palindrome Partitioning problem. It seeks to find the minimum number of cuts needed to partition a given string into palindromic substrings. It uses a 2D memoization table `t` to cache results. For a substring from `i` to `j`, if it's already a palindrome, no cuts are needed. Otherwise, it tries all possible split points `k` and stores the minimum cuts in `t`.
+ */

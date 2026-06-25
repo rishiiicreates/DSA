@@ -37,3 +37,12 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the 'k' numbers in the array that are closest to a given value 'x'.
+ * It uses a max-heap to keep track of the 'k' closest elements. It pushes pairs of (absolute difference from 'x', number) into the heap.
+ * Because it's a max-heap, the element with the largest difference from 'x' resides at the top.
+ * If the heap size exceeds 'k', the top element is popped, effectively discarding the element farthest from 'x'.
+ * After iterating through the array, the remaining 'k' elements in the heap are extracted, reversed, and returned as the closest numbers.
+ */

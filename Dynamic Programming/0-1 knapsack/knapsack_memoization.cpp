@@ -43,5 +43,12 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file implements the 0-1 knapsack problem using top-down dynamic programming 
+ * with memoization. It uses a 2D matrix (t) to cache results of overlapping subproblems 
+ * for given lengths and weights, optimizing the recursive choice diagram.
+ */
+
 
 

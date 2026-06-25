@@ -38,3 +38,11 @@ int main(){
     cout<<"Longenst Common Subsequence:"<< lps(a);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements an algorithm to find the Longest Palindromic Subsequence (LPS).
+ * The logic is a clever application of LCS. It takes the original string `s` and creates its reverse `k`.
+ * The LPS is then simply the Longest Common Subsequence (LCS) between the original string `s` and its reverse `k`.
+ * By computing the LCS of these two strings, we extract the longest subsequence that reads the same forwards and backwards.
+ */

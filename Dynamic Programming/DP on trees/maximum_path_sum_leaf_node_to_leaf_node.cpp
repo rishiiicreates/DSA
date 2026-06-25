@@ -57,3 +57,13 @@ int main(){
     cout<<"Maximum path sum:"<< result;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file calculates the maximum path sum between any two leaf nodes in a binary tree.
+ * Unlike the general max path sum, here the path MUST be from a leaf to another leaf.
+ * The `solve` function returns the max path sum from the current node down to a leaf.
+ * If the current node is a leaf, it just considers its own value.
+ * The reference variable `result` is updated to store the maximum path sum that forms an arch between two leaves
+ * passing through the current node (l + r + root->val).
+ */

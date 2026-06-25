@@ -41,5 +41,17 @@ int main(){
     //answer should be any one of peak element: either 20 or 90
     int ans = solve(arr);
     cout << arr[ans];
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds a peak element in an unsorted array using binary search. A peak is an element strictly greater than its neighbors.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to the last index. Quick exit if there's only 1 element.
+ * 2. Loop while 'left <= right':
+ *    - Calculate 'mid'.
+ *    - Check if 'arr[mid]' is a peak by comparing it with its left and right neighbors (with boundary conditions for the first and last elements). If it is a peak, return 'mid'.
+ *    - If 'arr[mid - 1] > arr[mid]', the array is decreasing going into 'mid', implying a peak must exist in the left half. Update 'right = mid - 1'.
+ *    - Otherwise, the array is increasing going out of 'mid' (or at least 'arr[mid + 1] >= arr[mid]'), meaning a peak must exist in the right half. Update 'left = mid + 1'.
+ */

@@ -30,3 +30,19 @@ int main(){
     cout<<solve(arr,k);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements binary search to find the "ceil" of a given element 'k' in a sorted array.
+ * The ceil of 'k' is the smallest element in the array that is greater than or equal to 'k'.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to the last index of the array.
+ * 2. Use a variable 'ans' to store the potential ceil value.
+ * 3. Loop while 'left <= right':
+ *    - Calculate 'mid'.
+ *    - If 'arr[mid] == k', then 'k' itself is the ceil, so return 'arr[mid]'.
+ *    - If 'k > arr[mid]', the ceil must be to the right of 'mid', so update 'left = mid + 1'.
+ *    - If 'k < arr[mid]', 'arr[mid]' is a candidate for the ceil. Store it in 'ans' and search in the left half ('right = mid - 1') to find a potentially smaller candidate that is still greater than 'k'.
+ * 4. Return 'ans'.
+ */

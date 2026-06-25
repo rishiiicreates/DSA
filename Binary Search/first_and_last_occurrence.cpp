@@ -48,5 +48,21 @@ int main(){
     vector<int> arr{2,4,10,10,10,18,20};
     int k = 10;
     cout<< first_occur(arr,k) << "\n" << last_occur(arr, k);
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds the first and last occurrences of a given element 'k' in a sorted array containing duplicates.
+ * 
+ * Algorithm steps:
+ * 1. It uses two separate binary search functions: 'first_occur' and 'last_occur'.
+ * 2. For 'first_occur':
+ *    - Perform binary search. If 'arr[mid] == k', a match is found. Record 'mid' as a potential result and continue searching the left half ('right = mid - 1') to find any earlier occurrences.
+ *    - If 'arr[mid] < k', search the right half.
+ *    - If 'arr[mid] > k', search the left half.
+ * 3. For 'last_occur':
+ *    - Perform binary search. If 'arr[mid] == k', record 'mid' and continue searching the right half ('left = mid + 1') to find any later occurrences.
+ *    - If 'arr[mid] < k', search the right half.
+ *    - If 'arr[mid] > k', search the left half.
+ * 4. Print both occurrences.
+ */

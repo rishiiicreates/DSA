@@ -117,3 +117,8 @@ int main(){
     cout << "Number of ways: " << solve(arr, i, j, true) << endl; 
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the memoized version of the "Evaluate Expression to True" problem. It shows two approaches to caching subproblem results: the first (commented out) uses a 3D vector `t[i][j][wtf]`, and the second (active) uses a `std::map<string, int>` where the key is a concatenated string of `i`, `j`, and `wtf` (e.g., "i j wtf"). Both approaches prevent redundant calculations by storing the number of ways a subexpression from `i` to `j` evaluates to the desired boolean value (`wtf`), converting the exponential time complexity to polynomial.
+ */

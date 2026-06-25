@@ -39,3 +39,10 @@ int main(){
     cout<<ans;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds the number of subsets with a given difference. It translates 
+ * the problem into finding the count of subsets with a specific target sum using 
+ * mathematical deduction, based on the 0-1 knapsack paradigm.
+ */

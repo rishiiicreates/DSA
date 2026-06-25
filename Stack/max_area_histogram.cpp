@@ -35,3 +35,14 @@ int main() {
     cout << "Maximum Histogram Area: " << MAH(arr) << endl;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the maximum rectangular area possible in a given histogram where the largest rectangle can be formed by contiguous bars.
+ * It uses a stack to keep track of the indices of the bars.
+ * For every bar, we calculate the area with that bar as the smallest bar in the rectangle.
+ * The stack stores the indices of the bars in an increasing order of their heights.
+ * When we encounter a bar shorter than the bar at the top of the stack, we pop the top bar and calculate the area of the rectangle with the popped bar as the smallest bar.
+ * The 'width' of this rectangle is determined by the current index `i` (as the right boundary) and the new top of the stack (as the left boundary).
+ * This ensures an O(N) time complexity because every element is pushed and popped exactly once.
+ */

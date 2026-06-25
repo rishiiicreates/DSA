@@ -34,3 +34,12 @@ int main(){
     for(int i: ans) cout << i <<endl;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm sorts a 'k-sorted' array (where each element is at most 'k' positions away from its target sorted position) efficiently.
+ * It maintains a min-heap of size at most 'k + 1'. As elements are processed, they are pushed into the min-heap.
+ * When the heap size exceeds 'k', it guarantees that the minimum element currently in the heap is the smallest among all remaining unsorted elements, because elements can be displaced by at most 'k' positions.
+ * The top element is popped and placed in the sorted answer array.
+ * Finally, any remaining elements in the heap are popped and appended to the answer array in sorted order.
+ */

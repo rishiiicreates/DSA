@@ -64,3 +64,12 @@ int main() {
 
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements an algorithm to print the Longest Palindromic Substring using a standard 2D boolean DP array.
+ * Here, `dp[i][j]` is true if the substring from index `i` to `j` is a palindrome.
+ * Base cases are initialized for lengths 1 (all true) and lengths 2 (true if both characters match).
+ * For lengths 3 and above, `s[i...j]` is a palindrome if the outer characters match (`s[i] == s[j]`) AND the inner substring is a palindrome (`dp[i+1][j-1]`).
+ * The `maxLen` and `start` variables keep track of the best result to return the substring directly.
+ */

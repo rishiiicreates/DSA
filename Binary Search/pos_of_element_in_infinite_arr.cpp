@@ -40,5 +40,19 @@ int main() {
     } else {
         cout << "Element not found in the vector." << endl;
     }
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds the position of a specific element in an infinitely sized sorted array.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to 1.
+ * 2. Loop while 'left <= right':
+ *    - Check if the search window contains the target element. If the element at 'right' is smaller than the target ('arr[right] < element'), the target must be further to the right. Therefore, update 'left = right' and double the 'right' index ('right *= 2') to exponentially expand the search space until the target is within bounds.
+ *    - If the target is within the bounds, calculate 'mid'.
+ *    - If 'arr[mid] == element', the target is found, return 'mid'.
+ *    - If 'arr[mid] < element', search in the right half by setting 'left = mid + 1'.
+ *    - If 'arr[mid] > element', search in the left half by setting 'right = mid - 1'.
+ * 3. Return -1 if not found.
+ */

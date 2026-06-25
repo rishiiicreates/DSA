@@ -37,3 +37,12 @@ int main(){
     cout<< lcs(x, y, n, m);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the recursive approach to find the Longest Common Subsequence (LCS) of two strings.
+ * The algorithm compares the strings from the end. If the last characters match, it adds 1 to the length and recursively calls the function for the remaining substrings (n-1, m-1).
+ * If the characters do not match, it explores two possibilities: excluding the last character of the first string or excluding the last character of the second string.
+ * It then takes the maximum of these two recursive calls to find the longest subsequence length. 
+ * This is the foundational approach but operates in exponential time complexity due to overlapping subproblems.
+ */

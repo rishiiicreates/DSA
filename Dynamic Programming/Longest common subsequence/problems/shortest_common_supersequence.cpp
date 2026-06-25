@@ -40,3 +40,11 @@ int main(){
     cout << scs(x, y);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file calculates the length of the Shortest Common Supersequence (SCS) of two strings.
+ * An SCS is the shortest string that has both input strings as subsequences.
+ * Conceptually, if you concatenate both strings, you double-count the characters they have in common (their LCS).
+ * Therefore, the length of the SCS is optimally derived by summing the lengths of both strings and subtracting the length of their LCS: `(n + m) - lcs_length`.
+ */

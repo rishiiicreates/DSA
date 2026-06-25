@@ -50,3 +50,13 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm recursively deletes the middle element of a stack.
+ * 1. Base Condition: When 'mid' reaches 1, we are at the target middle element. We pop it and return.
+ * 2. Hypothesis: We save the current top element, pop it, and recursively call the function with 'mid - 1' 
+ *    to process the remaining elements until we hit the middle.
+ * 3. Induction: As the recursive calls return (after the middle element has been removed), we push the 
+ *    saved top elements back onto the stack, restoring its original order minus the middle element.
+ */

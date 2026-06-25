@@ -63,5 +63,18 @@ int main(){
     int k = 35;
     pair<int,int> ans = solve(arr,k);
     cout<<"row:"<< ans.first+1 <<"    "<<"columns:"<<ans.second+1;
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file finds a target value in a 2D matrix where every row and every column are independently sorted.
+ * 
+ * Algorithm steps:
+ * 1. It starts the search from the top-right corner of the matrix ('i = 0', 'j = cols - 1').
+ * 2. The element at the top-right is the maximum of its row and the minimum of its column.
+ * 3. Loop while within matrix bounds:
+ *    - If 'arr[i][j] == k', the target is found, return its coordinates.
+ *    - If 'arr[i][j] > k', the entire current column can be eliminated because all elements below it are even larger. Move left ('j--').
+ *    - If 'arr[i][j] < k', the entire current row can be eliminated because all elements to its left are even smaller. Move down ('i++').
+ * 4. Return '{-1, -1}' if the target is not found.
+ */

@@ -90,5 +90,19 @@ int main() {
     int ans = solve(pages, students);
     cout << "Minimum possible maximum pages = " << ans << '\n'; // expected: 113
 
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file solves the "Allocate Minimum Number of Pages" problem using binary search on the answer space.
+ * 
+ * Algorithm steps:
+ * 1. The search space for the answer (maximum pages assigned to a student) ranges from the maximum single book's pages ('left = max(arr)') to the sum of all pages ('right = sum(arr)').
+ * 2. Binary search within this range '[left, right]'. For a candidate 'mid', a helper function 'isValid' checks if books can be allocated to 'students' students such that no student reads more than 'mid' pages.
+ * 3. Inside 'isValid':
+ *    - Iterate through books, greedily assigning them to the current student.
+ *    - If adding a book exceeds 'mid', assign it to a new student and increment the student count.
+ *    - If the student count exceeds the allowed number 'students', 'mid' is not a valid allocation (return false).
+ * 4. If 'isValid' returns true for 'mid', it means 'mid' is a potential minimum maximum pages value. Store it as 'result' and attempt to find a smaller valid maximum by searching the left half ('right = mid - 1').
+ * 5. If false, the maximum limit 'mid' is too strict, so search the right half ('left = mid + 1').
+ */

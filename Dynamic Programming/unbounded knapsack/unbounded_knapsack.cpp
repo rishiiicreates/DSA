@@ -33,3 +33,10 @@ int unboundsack(vector<int>& arr,vector<int>& length, int S){
     }
     return t[len][S];
 }
+
+/*
+ * Explanation:
+ * This file implements the basic unbounded knapsack problem. 
+ * Items can be selected multiple times without restrictions, optimizing the value 
+ * based on capacity.
+ */

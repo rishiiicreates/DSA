@@ -29,3 +29,10 @@
 
 // Identify the pattern
 // then verift the variation
+
+/*
+ * Explanation:
+ * This file serves as an introductory index or table of contents for the topic of Stacks in Data Structures and Algorithms.
+ * It lists common problems that can be solved using stack-based approaches, such as nearest greater/smaller element variations, stock span, histogram, and valid parentheses.
+ * It also provides a brief heuristic on when to apply stack concepts (e.g., when the brute-force approach has an O(N^2) time complexity and the inner loop depends on the outer loop).
+ */

@@ -147,3 +147,14 @@ int main() {
     
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm recursively finds the k-th symbol in the n-th row of a grammar sequence.
+ * 1. Base Condition: If n = 1 (first row) or k = 1 (first symbol in any row), the value is 0.
+ * 2. Induction/Hypothesis: The problem exhibits a pattern where the first half of a row is 
+ *    identical to the previous row, and the second half is its inverse (though the inversion 
+ *    is not explicitly implemented in this code snippet). We find the midpoint of the row.
+ *    If 'k' is in the left half, we recursively look for the k-th element in row 'n-1'.
+ *    If 'k' is in the right half, we recursively look for the (k-mid)-th element in row 'n-1'.
+ */

@@ -33,5 +33,20 @@ int main(){
     vector<int> arr{1,2,3,4,8,10,12,19};
     int k = 5;
     cout<<solve(arr,k);
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements binary search to find the "floor" of a given element 'k' in a sorted array.
+ * The floor of 'k' is the greatest element in the array that is less than or equal to 'k'.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to the array's last index.
+ * 2. Use a variable 'ans' to track the floor value.
+ * 3. Loop while 'left <= right':
+ *    - Calculate 'mid'.
+ *    - If 'arr[mid] == k', 'k' itself is the floor, so return 'arr[mid]'.
+ *    - If 'arr[mid] < k', 'arr[mid]' is a candidate for the floor. Store it in 'ans' and search the right half ('left = mid + 1') for a potentially larger candidate that is still less than or equal to 'k'.
+ *    - If 'arr[mid] > k', the floor must lie in the left half, so update 'right = mid - 1'.
+ * 4. Return 'ans'.
+ */

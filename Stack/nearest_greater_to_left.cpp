@@ -33,3 +33,12 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the Nearest Greater Element (NGE) to the left for every element in an array.
+ * It uses a stack to store the elements as it iterates from left to right.
+ * For each element, it repeatedly pops elements from the stack if they are less than or equal to the current element. This maintains a monotonically decreasing stack.
+ * If the stack becomes empty, it means there is no greater element to the left, so `-1` is appended. Otherwise, the top element of the stack is the NGE.
+ * Time complexity is O(N) because each element is pushed and popped at most once.
+ */

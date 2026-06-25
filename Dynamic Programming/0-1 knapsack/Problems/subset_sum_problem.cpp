@@ -36,3 +36,10 @@ int main(){
     cout << (ans > 0 ? "true" : "false");
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file checks if there exists a subset within the array that adds up 
+ * to a specific target sum. It builds a boolean DP matrix returning true if 
+ * the target sum can be achieved by including or excluding items.
+ */

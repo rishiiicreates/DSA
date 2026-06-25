@@ -29,6 +29,11 @@ int solve(int arr[], int i, int j){
     return ans;
 }
 
+/*
+ * Explanation:
+ * This file serves as an introduction to the Matrix Chain Multiplication (MCM) pattern in Dynamic Programming. It lists seven common DP problems that follow the MCM pattern, such as printing MCM, evaluating boolean expressions, palindrome partitioning, scrambled string, and egg dropping. It also provides the general skeleton/template for MCM recursive solutions: defining base cases for invalid inputs, trying all possible split points `k` between `i` and `j`, recursively solving the subproblems `(i, k)` and `(k+1, j)`, and combining their answers to find the optimal solution.
+ */
+
 
 
 

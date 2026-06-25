@@ -37,3 +37,12 @@ int main(){
     cout<<min_d_palindrome(s);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file calculates the minimum number of insertions required to make a string a palindrome.
+ * Interestingly, this is logically identical to finding the minimum number of deletions to make a palindrome.
+ * The core idea uses the Longest Palindromic Subsequence (LPS).
+ * Any character that isn't part of the LPS needs a corresponding matching character inserted to restore symmetry.
+ * Thus, the minimum insertions equals the string length minus the LPS length (`len - t[len][len]`).
+ */

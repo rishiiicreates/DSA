@@ -51,3 +51,12 @@ int main(){
     cout << "Maximum Area of Rectangle in Binary Matrix: " << maximalRectangle(matrix) << endl;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the maximum rectangular area of 1s in a 2D binary matrix.
+ * It works by reducing the problem to multiple instances of the "Maximum Area Histogram" (MAH) problem.
+ * The matrix is processed row by row. For each row, a 1D histogram array is maintained where the height represents the number of consecutive 1s in the current column ending at the current row. If a cell is 0, the corresponding histogram height becomes 0.
+ * For each updated row, the MAH function is called to find the maximum rectangular area possible up to that row.
+ * The overall maximum area found across all rows is returned. The time complexity is O(R * C), where R is the number of rows and C is the number of columns.
+ */

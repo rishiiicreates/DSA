@@ -35,8 +35,19 @@
 #include <iostream>
 using namespace std;
 
+struct Node{
+    int val;
+    Node* left;
+    Node* right;
 
-int solve(node* root, int& result){ // this result constain the main answer
+    Node(int data){
+        val = data;
+        right = nullptr;
+        left = nullptr;
+    }
+};
+
+int solve(Node* root, int& result){ // this result constain the main answer
 
     //base condition:
     if(root == nullptr) return 0; // can change according to the questions
@@ -55,6 +66,16 @@ int solve(node* root, int& result){ // this result constain the main answer
 
 int main(){
     int result = INT_MIN;
-    solve(input);
+    solve(input, result);
     return result;
 }
+
+/*
+ * Explanation:
+ * This file serves as an introduction to Dynamic Programming on Trees.
+ * It outlines the general recursive syntax used for these problems which usually involves three steps:
+ * 1. Base condition (often checking for null nodes).
+ * 2. Hypothesis (recursive calls to left and right children).
+ * 3. Induction (using the child results to compute the local optimal and update a global 'result' reference).
+ * The template shows how a global maximum or minimum is maintained while returning a value to the parent node.
+ */

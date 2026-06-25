@@ -49,3 +49,8 @@ int main(){
     cout<<solve(arr,i,j);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the Palindrome Partitioning problem using a pure recursive approach. The goal is to find the minimum number of partitions (cuts) required such that every resulting substring is a palindrome. The `solve` function checks if the current substring from `i` to `j` is already a palindrome; if so, it returns 0 cuts. Otherwise, it tries all possible split points `k` between `i` and `j-1`, recursively finding the cuts needed for the left and right parts, and adds 1 for the current cut, keeping track of the minimum total cuts.
+ */

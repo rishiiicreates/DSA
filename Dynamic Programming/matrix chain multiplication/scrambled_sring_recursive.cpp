@@ -51,3 +51,8 @@ int main(){
     cout<< ((ans > 0) ? "True" : "False");
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements a recursive solution to the Scrambled String problem. It determines whether one string can be transformed into another by representing it as a binary tree and allowing the swapping of non-leaf nodes. The `solve` function checks base cases (equality or emptiness) and then tries splitting the strings at every possible length `i`. For each split, it recursively checks two scenarios: 1) the children of the current node were swapped (comparing left of `a` with right of `b`, and right of `a` with left of `b`), or 2) the children were not swapped (comparing left of `a` with left of `b`, and right of `a` with right of `b`).
+ */

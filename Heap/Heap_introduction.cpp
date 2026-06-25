@@ -39,3 +39,13 @@
 //min heap -> priority_queue<int, vector<int>, greater<int>> minheap; {smallest, lowest}
 
 
+
+/*
+ * Explanation:
+ * This file serves as an introductory guide for Heap data structures in C++ and problem-solving.
+ * It explains that heaps (priority queues) are essentially fully-filled binary trees represented as stack-like structures.
+ * It outlines how to identify heap-related problems, generally focusing on finding 'k' largest or smallest elements.
+ * For "k smallest" elements, it recommends using a max-heap. For "k largest" elements, a min-heap is used.
+ * It provides a trace of inserting elements into a heap with a size constraint, dropping elements that exceed the bound to maintain the 'k' limit.
+ * Finally, it provides the standard C++ STL syntax for initializing a max-heap and a min-heap.
+ */

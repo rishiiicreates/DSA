@@ -36,3 +36,12 @@ int main() {
     cout << "Trapped Water: " << trap(height) << endl;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm calculates the amount of rainwater that can be trapped between the bars of an elevation map.
+ * It uses two auxiliary arrays, `mxl` (maximum to the left) and `mxr` (maximum to the right), to precompute the highest bar to the left and right of every index respectively.
+ * The amount of water trapped above any bar `i` is determined by `min(mxl[i], mxr[i]) - arr[i]`.
+ * It iterates through the array to populate the prefix max array (`mxl`), and then iterates backwards to populate the suffix max array (`mxr`).
+ * Finally, it calculates the water trapped at each index and sums it up, resulting in an O(N) time complexity and O(N) space complexity.
+ */

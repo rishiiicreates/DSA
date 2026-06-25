@@ -43,4 +43,13 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file solves the problem of finding the minimum number of insertions and deletions required to convert string 'x' to string 'y'.
+ * The logic is built upon the Longest Common Subsequence (LCS).
+ * The characters that are part of the LCS do not need to be changed.
+ * Therefore, the deletions required from 'x' are the characters not in the LCS (`n - lcs_length`).
+ * The insertions required into 'x' (to match 'y') are the characters in 'y' that are not in the LCS (`m - lcs_length`).
+ */
+
 

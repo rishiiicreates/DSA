@@ -39,3 +39,12 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file implements the Longest Common Subsequence (LCS) algorithm using a tabular approach (bottom-up Dynamic Programming, sometimes referred to as top-down conceptually in this code's comments).
+ * It eliminates recursion entirely by iteratively filling a 2D DP table `t`, where `t[i][j]` represents the LCS length for prefixes of lengths `i` and `j`.
+ * The table is initialized with 0s for base cases (empty strings). Then, using the choice diagram:
+ * If characters match, `t[i][j] = 1 + t[i-1][j-1]`. If they differ, it takes the maximum from excluding either character `max(t[i-1][j], t[i][j-1])`.
+ * This approach optimally solves the LCS problem in O(N*M) time and space without call stack overhead.
+ */
+

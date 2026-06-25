@@ -56,3 +56,12 @@ int main(){
     cout<<"Maximum path sum:"<<result;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file solves the Maximum Path Sum problem for a binary tree.
+ * The path can start and end at any node. The `solve` function computes the maximum path sum extending downwards.
+ * It computes `temp` which is the maximum of just the current node or the current node plus the best single path from its children.
+ * Then, it considers `ans`, which is the maximum path passing through the current node and both its children.
+ * The global maximum `result` is continuously updated with the best of `temp` and `ans`.
+ */

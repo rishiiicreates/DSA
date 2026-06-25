@@ -55,3 +55,11 @@ int main() {
 
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements an algorithm to both find and print the Longest Common Substring.
+ * It builds the DP table similarly to the standard substring algorithm but keeps track of `maxLen` and `endPos` (the ending index in `s1` where the maximum length was found).
+ * If characters don't match, the DP cell is reset to 0.
+ * Finally, the substring is extracted directly from `s1` using `s1.substr(endPos - maxLen, maxLen)`.
+ */

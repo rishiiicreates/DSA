@@ -34,3 +34,12 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm calculates the stock span for each day, which is the maximum number of consecutive days just before the given day (including the day itself) where the stock price was less than or equal to its price on the current day.
+ * It works by finding the Nearest Greater Element to the left (NGL) using a stack. The stack stores pairs of `(index, value)`.
+ * For each day's price, it pops all prices from the stack that are less than or equal to the current price.
+ * If the stack becomes empty, it means all previous prices were smaller, so the span is `i + 1`. Otherwise, the span is the difference between the current index and the index of the nearest greater element (`i - s.top().first`).
+ * Time complexity is O(N) since each element is pushed and popped exactly once.
+ */

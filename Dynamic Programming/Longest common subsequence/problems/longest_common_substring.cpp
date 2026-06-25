@@ -37,3 +37,12 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file implements an algorithm to find the Longest Common Substring between two strings.
+ * Unlike a subsequence, a substring must be contiguous.
+ * It uses a top-down DP approach similar to LCS. If characters match, `t[i][j] = 1 + t[i-1][j-1]` and a `maximum` variable is updated.
+ * If characters do NOT match, we don't carry over previous values like in LCS. The default 0 initialization handles the reset.
+ * The maximum length found anywhere in the DP table is returned.
+ */
+

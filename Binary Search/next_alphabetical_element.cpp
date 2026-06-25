@@ -32,7 +32,20 @@ int main(){
     string arr = "abeg";
     char s = 'f';
     cout<<solve(arr,s);
-    return 0;
 }
 
-
+/*
+ * Explanation:
+ * This file finds the "ceil" of a given character 's' in a sorted string/array of alphabetic characters.
+ * The ceil is the smallest character strictly greater than 's'.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to the string's last index.
+ * 2. Use a variable 'ans' to store the potential ceil character.
+ * 3. Loop while 'left <= right':
+ *    - Calculate 'mid'.
+ *    - If 'arr[mid] == s', the next alphabetical element must be to the right, so update 'left = mid + 1'.
+ *    - If 'arr[mid] > s', 'arr[mid]' is a candidate for the answer. Store it in 'ans' and search in the left half ('right = mid - 1') to find a tighter, smaller candidate.
+ *    - If 'arr[mid] < s', the ceil must lie in the right half, so update 'left = mid + 1'.
+ * 4. Return 'ans'.
+ */

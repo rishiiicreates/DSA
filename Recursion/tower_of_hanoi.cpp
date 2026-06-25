@@ -57,3 +57,15 @@ int main(){
     solve(S,D,H,n);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm solves the classic Tower of Hanoi problem using recursion.
+ * 1. Base Condition: If there is only 1 disk left (n == 1), we directly move it from the Source rod 
+ *    to the Destination rod and return.
+ * 2. Hypothesis: We assume our recursive function can successfully move the top (n-1) disks 
+ *    from the Source rod to the Helper rod, using the Destination rod as an intermediate.
+ * 3. Induction: After moving the top (n-1) disks out of the way, we move the largest disk (the nth disk) 
+ *    from the Source rod directly to the Destination rod. Finally, we make another recursive call 
+ *    to move the (n-1) disks from the Helper rod to the Destination rod.
+ */

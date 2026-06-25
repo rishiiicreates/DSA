@@ -36,3 +36,10 @@ int main(){
     cout<< coinmaxways(arr, sum);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file solves the unbounded knapsack variation known as the coin change problem 
+ * (maximum ways). It calculates the total number of distinct ways to achieve a given 
+ * sum using an infinite supply of coins of specified denominations.
+ */

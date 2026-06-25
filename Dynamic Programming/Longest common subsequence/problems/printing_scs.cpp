@@ -55,3 +55,13 @@ int main(){
     cout<< ans;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements an algorithm to construct and print the Shortest Common Supersequence (SCS).
+ * It builds the LCS DP table first.
+ * Then, tracing back from `t[n][m]`:
+ * - If characters match, add one instance to the answer and move diagonally.
+ * - If they differ, find the direction of the larger DP value, add the corresponding character from that string to the answer, and move that way.
+ * After reaching the edge of the table, any remaining characters in either string are added. Finally, the constructed string is reversed.
+ */

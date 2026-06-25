@@ -35,3 +35,8 @@ int main(){
     cout<< ((ans > 0) ? "True" : "False");
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file attempts to implement the memoized version of the Scrambled String problem, which checks if one string is a scrambled version of another. It tries to use a 2D vector `t` to cache results to avoid redundant calculations. However, the memoization implementation is incomplete as it currently does not effectively map the substring states to the 2D vector indices. It follows the same recursive logic as the pure recursive approach: trying every split point `i` and checking both the swapped and unswapped subtree scenarios.
+ */

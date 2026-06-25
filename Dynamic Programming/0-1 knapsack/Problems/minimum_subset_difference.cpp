@@ -41,3 +41,10 @@ int minsubsetsum(vector<int>& arr){
 int main(){
     vector<int> arr{1,6,11,5};
 }
+
+/*
+ * Explanation:
+ * This file finds the minimum possible difference between the sums of two subsets. 
+ * It computes the possible subset sums using DP and then determines the partition 
+ * that yields the smallest difference from the optimal half-sum.
+ */

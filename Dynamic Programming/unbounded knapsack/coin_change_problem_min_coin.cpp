@@ -36,5 +36,12 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file addresses another variation of the coin change problem: finding the 
+ * minimum number of coins needed to make up a given sum. It initializes the matrix 
+ * with infinity and iteratively finds the minimum coins by either including or excluding each coin.
+ */
+
 
 

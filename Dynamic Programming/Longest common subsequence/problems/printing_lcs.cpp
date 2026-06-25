@@ -51,3 +51,13 @@ int main(){
     cout<< lcsp(x, y);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file demonstrates how to print the Longest Common Subsequence (LCS) rather than just finding its length.
+ * First, the standard 2D DP table `t` is populated.
+ * Then, it traces back from the bottom-right corner `t[n][m]`:
+ * - If `x[n-1] == y[m-1]`, this character is part of the LCS. It's added to a string, and we move diagonally (`n--`, `m--`).
+ * - If they don't match, we move in the direction of the larger DP value (either up `n--` or left `m--`).
+ * Since the traceback constructs the string backwards, the result is reversed before returning.
+ */

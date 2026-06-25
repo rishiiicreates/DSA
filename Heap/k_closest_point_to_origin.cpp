@@ -43,3 +43,12 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the 'k' closest points to the origin (0,0) from a given set of 2D points.
+ * It calculates the squared Euclidean distance (x^2 + y^2) from the origin for each point. The square root is omitted for efficiency since relative distances are sufficient.
+ * A max-heap is used to maintain the 'k' closest points seen so far. Each point's distance and coordinates are pushed into the heap.
+ * If the heap size exceeds 'k', the point with the maximum distance (which is at the top of the max-heap) is popped out.
+ * After evaluating all points, the max-heap contains exactly the 'k' closest points, which are extracted and returned.
+ */

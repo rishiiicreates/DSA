@@ -7,3 +7,10 @@
 
 // initialization + DP = answer
 
+/*
+ * Explanation:
+ * This file outlines the identification pattern for 0-1 knapsack problems. 
+ * It identifies the core components: weight and value arrays, bag capacity, 
+ * and item length, formulating the solution as initialization plus DP (dynamic programming).
+ */
+

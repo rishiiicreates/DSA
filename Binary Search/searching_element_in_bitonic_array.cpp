@@ -28,5 +28,18 @@ int main(){
     vector<int> arr{1,3,5,8,4,2,1};
     int key = 4;
     cout<<solve(arr,key);
-    return 0;
 }
+
+/*
+ * Explanation:
+ * This file searches for an element in what is supposed to be a bitonic array.
+ * Note: The binary search logic implemented here simply checks if arr[left] < arr[mid] to decide which half to search, which may not be completely standard for a bitonic array, but this is how it is implemented in this file.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to the last index.
+ * 2. Loop while 'left <= right':
+ *    - Calculate 'mid'.
+ *    - If 'arr[mid] == k', return 'mid'.
+ *    - If 'arr[left] < arr[mid]', update 'left = mid + 1'.
+ *    - Else, update 'right = mid - 1'.
+ */

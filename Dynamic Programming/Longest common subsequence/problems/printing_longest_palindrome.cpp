@@ -39,3 +39,11 @@ public:
         return s.substr(max_i - max_len, max_len);
     }
 };
+
+/*
+ * Explanation:
+ * This file prints the Longest Palindromic Substring using an approach similar to Longest Common Substring between the string and its reverse.
+ * To ensure the matched substring is genuinely a palindrome (and not just a reversed matching segment somewhere else),
+ * it performs a critical check: `((i - 1) - t[i][j] + 1 == (len - 1) - (j - 1))`. This validates that the matched indices map to the exact same physical characters in the original string.
+ * It tracks `max_len` and the ending index `max_i` to efficiently extract the final palindrome without backtracking.
+ */

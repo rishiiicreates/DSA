@@ -33,3 +33,11 @@ int main(){
     return 0;
 }
 
+/*
+ * Explanation:
+ * This file calculates the minimum number of deletions required to make a string a palindrome.
+ * The logic leverages the Longest Palindromic Subsequence (LPS).
+ * Any character that is not part of the LPS must be deleted to form a palindrome.
+ * Thus, the minimum deletions required is simply the length of the string minus the length of its LPS (`n - t[n][n]`).
+ */
+

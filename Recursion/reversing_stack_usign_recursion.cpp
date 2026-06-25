@@ -52,3 +52,17 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm recursively reverses a stack without using any auxiliary data structure.
+ * It uses the Hypothesis-Induction-Base Condition approach with two recursive functions:
+ * 1. solve(stk): 
+ *    - Base Condition: If the stack has 1 or fewer elements, it's already reversed.
+ *    - Hypothesis: We pop the top element and recursively reverse the rest of the stack.
+ *    - Induction: We use the `insert` helper function to place the popped element at the very bottom of the now-reversed stack.
+ * 2. insert(stk, ele):
+ *    - Base Condition: If the stack is empty, push the element.
+ *    - Hypothesis: Pop the top element and recursively call `insert` to reach the bottom.
+ *    - Induction: Push the previously popped element back on top.
+ */

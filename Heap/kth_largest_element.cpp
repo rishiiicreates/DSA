@@ -35,3 +35,12 @@ int main(){
     for(int i: ans) cout << i <<endl;
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds all 'k' largest elements in an array.
+ * It uses a min-heap to keep track of the 'k' largest elements seen so far.
+ * As elements are processed, they are pushed into the min-heap. Because it's a min-heap, the smallest of the top 'k' elements is at the top.
+ * If the heap size exceeds 'k', the top element (the smallest one) is popped out, ensuring the heap only contains the 'k' largest elements.
+ * After evaluating all elements, the remaining 'k' elements in the heap are extracted, reversed (to order them from largest to smallest), and returned.
+ */

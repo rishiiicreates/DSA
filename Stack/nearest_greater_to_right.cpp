@@ -39,3 +39,13 @@ int main(){
     }
     return 0;
 }
+
+/*
+ * Explanation:
+ * This algorithm finds the Next Greater Element (NGE) to the right for every element in an array.
+ * It uses a stack to keep track of elements whose next greater element is not yet found.
+ * By traversing the array from right to left, it maintains a monotonically decreasing stack (from bottom to top).
+ * For each element, it pops all elements from the stack that are smaller than or equal to the current element.
+ * If the stack becomes empty, there is no greater element to the right, so `-1` is assigned. Otherwise, the top of the stack is the NGE.
+ * Finally, it reverses the result array to match the original array's order. Time complexity is O(N) since each element is pushed and popped at most once.
+ */

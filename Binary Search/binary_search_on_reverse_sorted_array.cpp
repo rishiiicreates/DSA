@@ -26,3 +26,18 @@ int main(){
     cout<< solve(arr, k);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements binary search on an array sorted in descending (reverse) order.
+ * 
+ * Algorithm steps:
+ * 1. Initialize 'left' to 0 and 'right' to the last index.
+ * 2. Loop while 'left <= right':
+ *    - Calculate 'mid'.
+ *    - If 'arr[mid] == k', the element is found, return 'mid'.
+ *    - Since the array is descending:
+ *      - If 'k < arr[mid]', the element 'k' must lie in the right half (where elements are smaller), so update 'left = mid + 1'.
+ *      - If 'k > arr[mid]', the element 'k' must lie in the left half (where elements are larger), so update 'right = mid - 1'.
+ * 3. Return -1 if the element is not found.
+ */

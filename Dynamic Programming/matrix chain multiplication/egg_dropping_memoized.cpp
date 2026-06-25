@@ -27,3 +27,8 @@ int main(){
     cout<<"Minimum no of attempts:"<<solve(e,f);
     return 0;
 }
+
+/*
+ * Explanation:
+ * This file implements the Egg Dropping Problem using recursion with memoization (top-down DP). It finds the minimum attempts to determine the critical floor given `e` eggs and `f` floors. To optimize the pure recursive approach, it stores the results of subproblems in a 2D vector `t`. If a state `(e, f)` has already been computed, it retrieves the answer from `t` directly, thereby drastically reducing the time complexity compared to the exponential pure recursive solution.
+ */
